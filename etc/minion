@@ -1,0 +1,13 @@
+master: localhost
+id: container
+log_level: debug
+highstate:
+  report_failures: True
+  report_everything: False
+  report_format: html
+  report_delivery: smtp
+  smtp_success_subject: 'success minion {id} on host {host}'
+  smtp_failure_subject: 'failure minion {id} on host {host}'
+  smtp_server: smtp
+  smtp_recipients: saltusers@example.com
+  smtp_sender: salt@example.com
