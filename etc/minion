@@ -4,6 +4,7 @@ log_level: debug
 highstate:
   report_failures: True
   report_everything: False
+  report_changes: False
   report_format: html
   report_delivery: smtp
   smtp_success_subject: 'success minion {id} on host {host}'

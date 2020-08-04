@@ -6,7 +6,9 @@ Docker setup to test salt stack highstate returner module
 
 `
 $ docker-compose build
-$ docker-compose run --rm saltstack-py3
+$ docker-compose up -d smtp
+$ docker-compose run --rm saltstack-py3 test # test current version
+$ docker-compose run --rm saltstack-py3 test-patch # test patched version
 `
 
 this will launch a salt-master instance, a salt-minion instance and try to execute highstate using the returner to send an email. Email sents can be inspected using mailhog instance in port 8025.
