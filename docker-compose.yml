@@ -13,6 +13,6 @@ services:
     build:
       context: .
       args:
-        salt_version: 3001
+        salt_version: 3004
     depends_on:
       - smtp
